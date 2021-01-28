@@ -1,0 +1,12 @@
+{% extends "app/base.html" %}{% load i18n %}{% get_current_language as LANGUAGE %}
+{% block title_wrapper %}
+  <title>about entry area - {% trans "eager society" %}</title>
+{% endblock %}
+
+{% block content %}
+  <p class="title">entry area</p>
+  <br>
+  {% if LANGUAGE == "en" %}
+  {% elif LANGUAGE == "tr" %}
+  {% endif %}
+{% endblock %}

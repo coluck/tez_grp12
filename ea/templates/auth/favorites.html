@@ -1,0 +1,17 @@
+{% extends "auth/profile.html" %}{% load i18n %}
+{% block tabs %}
+  <div class="tabs is-boxed">
+    <ul>
+      <li>
+        <a href="{% url "user:profile" user_profile.username %}">
+          <span>{% trans "entries" %}</span>
+        </a>
+      </li>
+      <li class="is-active">
+        <a>
+          <span>{% trans "favorites" %}</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+{% endblock %}

@@ -1,0 +1,17 @@
+<div class="level is-mobile" style="flex-wrap: wrap">{% load i18n %}
+  <div class="level-item">
+    <a href="{% url "core:contact" %}">{% trans "contact" %}</a>
+  </div>
+  <div class="level-item">
+    <a href="{% url "core:about" %}">{% trans "about" %}</a>
+  </div>
+  <div class="level-item">
+    <a href="#" onclick="theme_toggle();return false;">{% trans "dark/light" %}</a>
+  </div>
+  <div class="level-item">
+    <a href="{% url "core:timezone" %}">{% trans "set timezone" %}</a>
+  </div>
+  <div class="level-item">
+    <a href="{% url "core:random" %}">{% trans "random thread" %}</a>
+  </div>
+</div>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>{% load static %}{% load i18n %}{% get_current_language as LANGUAGE %}
+<html lang="{{ LANGUAGE }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="entry area - eager society">
+  <meta name="theme-color" content="#222222">
+
+  <meta property="og:title" content="entry area">
+  <meta property="og:site_name" content="entryarea">
+  <meta property="og:url" content="https://entryarea.com/">
+  <meta property="og:description" content="">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://entryarea.com/static/img/min.svg">
+  <meta name="yandex-verification" content="94d4d44409c0b34b"/>
+  <meta name="msvalidate.01" content="08EBA8CFCC2960FC3CC8AE7ECE55241C"/>
+
+  <link rel="canonical" href="https://entryarea.com/"/>
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static "img/favi/apple-touch-icon.png" %}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static "img/favi/favicon-32x32.png" %}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static "img/favi/favicon-16x16.png" %}">
+  <link rel="manifest" href="{% static "img/favi/site.webmanifest" %}">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-143054677-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-143054677-1');
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WMQK68W');</script>
+  <!-- End Google Tag Manager -->
+
+
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <link rel="stylesheet" href="{% static "css/style.min.css" %}">
+  <link disabled id="site-light" rel="stylesheet" href="{% static "css/style-light.min.css" %}">
+  {% block title_wrapper %}<title>{% block title %}{% endblock %}entry area</title>{% endblock %}
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  {% include "partial/svg.html" %}
+</svg>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMQK68W"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<header>
+  {% include "partial/header.html" %}
+</header>
+<div class="main main-content">
+  <section class="columns">
+    <aside id="lefting" class="column is-3 is-narrow-mobile is-hidden-mobile">
+      {% include "app/leftpane.html" %}
+    </aside>
+    <div class="column is-6 is-12-mobile p-20">
+      {% block content %}{% endblock %}
+    </div>
+    <aside class="column is-3">
+      {% block rightpane %}{% endblock %}
+    </aside>
+  </section>
+  <footer class="footer column is-offset-3">
+    {% include "app/footer.html" %}
+  </footer>
+</div>
+<div name="fix-com">
+  {% include "partial/lang-switcher.html" %}
+  {% include "partial/message.html" %}
+</div>
+<script>
+  function theme_toggle() {
+    var el1 = document.getElementById("site-light");
+    if (el1.disabled) {
+      el1.disabled = false;
+      localStorage.setItem("theme", "light");
+    } else {
+      el1.disabled = true;
+      localStorage.setItem("theme", "dark");
+    }
+  }
+
+  if (localStorage.getItem("theme") === "light") {
+    document.getElementById("site-light").disabled = false;
+  } else {
+    document.getElementById("site-light").disabled = true;
+  }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+{#<script src="{% static "js/jquery.js" %}"></script>#}
+{#<script src="{% static "js/jquery-ui.js" %}"></script>#}
+<script src="{% static "js/readmore.min.js" %}"></script>
+<script>
+  $(".entry-content").readmore({
+    moreLink: '<a href="#"><b>{% trans "read more..." %}</b></a>',
+    lessLink: '',
+    collapsedHeight: 198
+  });
+</script>
+<script src="{% static "js/base.js" %}"></script>
+{% block script %}{% endblock %}
+</body>
+</html>
