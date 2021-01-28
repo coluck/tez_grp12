@@ -3,22 +3,30 @@ ESKİŞEHİR OSMANGAZİ ÜNİVERSİTESİ
 BİLGİSAYAR MÜHENDİSLİĞİ BÖLÜMÜ
 
 2020-2021 Eğitim-Öğretim Yılı
-152117124-ENGINEERING RESEARCH ON
-WIRELESS NETWORKS
+
+152117124-ENGINEERING RESEARCH ON WIRELESS NETWORKS
+
 FİNAL RAPORU
+
 Proje Başlığı
+
 “Çoklu Dil Destekli Web Tabanlı Sözlük Platformu”
 
 
 Projeyi Hazırlayanlar:
+
 ERDİ YAMAN, 152120131066, Bilgisayar Mühendisliği
+
 OĞUZ ÇOLAK, 152120161109, Bilgisayar Mühendisliği
 
 Görevliler:
+
 Arş. Gör. Dr. ZUHAL CAN
+
 Dr. Öğr. Üyesi Sinem BOZKURT KESER
 
 Danışman:
+
 Arş. Gör. Dr. ZUHAL CAN
 
 
